@@ -1,0 +1,1 @@
+import{visit as i}from"unist-util-visit";var r=/\b([-\w]+)(?:=(?:"([^"]*)"|'([^']*)'|([^"'\s]+)))?/g,m=a=>{i(a,"element",t=>{let e;if(t.tagName==="code"&&t.data&&t.data.meta)for(r.lastIndex=0;e=r.exec(t.data.meta);)t.properties[e[1]]=e[2]||e[3]||e[4]||!0})},s=()=>m,l=s;export{l as default};
