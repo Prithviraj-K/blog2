@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Minimal Blog - @lekoarts/gatsby-theme-minimal-blog]]></title><description><![CDATA[Hacker Writeups]]></description><link>https://rajkhandekar.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 29 Nov 2023 12:39:30 GMT</lastBuildDate><item><title><![CDATA[Forest]]></title><link>https://rajkhandekar.com/forest</link><guid isPermaLink="false">https://rajkhandekar.com/forest</guid><pubDate>Sat, 21 Oct 2023 04:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nmap nmap -v -A -oA nmap/forest 10.10.10.161
+
+Ping
+ping 10.10.10.161
+
+
+Ping tool suggests the box is windows as it has a ttl of 127.
+
+Standar…&lt;/p&gt;&lt;div style=&quot;margin-top: 50px; font-style: italic;&quot;&gt;&lt;strong&gt;&lt;a href=&quot;https://rajkhandekar.com/forest&quot;&gt;Keep reading&lt;/a&gt;.&lt;/strong&gt;&lt;/div&gt;&lt;br /&gt; &lt;br /&gt;</content:encoded></item></channel></rss>

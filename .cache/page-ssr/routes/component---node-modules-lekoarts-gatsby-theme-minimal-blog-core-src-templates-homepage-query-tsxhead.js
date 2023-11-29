@@ -68,7 +68,7 @@ function _createMdxContent(props) {
       fontWeight: `bold`,
       color: `heading`
     }
-  }), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "Hello, I'm Raj Khandekar."), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "Join me as I document my journey through the OSCP certification and beyond."));
+  }), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "I'm Raj Khandekar."), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "Join me as I document my journey through the OSCP certification and beyond."));
 }
 function MDXContent(props = {}) {
   const {

@@ -2,6 +2,33 @@ exports.id = "component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-s
 exports.ids = ["component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-content-file-path-content-pages-about-index-mdxhead"];
 exports.modules = {
 
+/***/ "./content/pages/about/OSWE.js":
+/*!*************************************!*\
+  !*** ./content/pages/about/OSWE.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function OSWE() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "OSWE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("iframe", {
+    src: "https://www.credential.net/embed/196f031f-3dbb-4fd9-9f0e-d31207530e89",
+    width: "50%",
+    height: "800",
+    frameborder: "0",
+    allowfullscreen: true
+  }));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OSWE);
+
+/***/ }),
+
 /***/ "./content/pages/about/index.mdx":
 /*!***************************************!*\
   !*** ./content/pages/about/index.mdx ***!
@@ -13,22 +40,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mdx-js/react */ "./node_modules/@mdx-js/react/lib/index.js");
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mdx-js/react */ "./node_modules/@mdx-js/react/lib/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _OSWE__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OSWE */ "./content/pages/about/OSWE.js");
 /*@jsxRuntime classic @jsx React.createElement @jsxFrag React.Fragment*/
+/*### Bug Bounty Findings - Upcoming*/
+
 
 
 function _createMdxContent(props) {
   const _components = Object.assign({
-    p: "p"
-  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__.useMDXComponents)(), props.components);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "Hi!"), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "I'm Raj Khandekar."));
+    p: "p",
+    hr: "hr",
+    h3: "h3"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__.useMDXComponents)(), props.components);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "Hi I'm Raj Khandekar."), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "My passion lies in web applications security. OSWE certified and experienced in cloud, databases and web development. I am passionate about developing my skills in order to prevent cyber threats."), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "As a dedicated cybersecurity professional, I am committed to staying up-to-date with the latest trends and technologies in the field. Excited to continue developing my expertise in offensive security, bug bounty hunting and contributing to the success of an organization in protecting their digital assets."), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.hr), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.h3, null, "Offensive Security Certications"), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_OSWE__WEBPACK_IMPORTED_MODULE_1__["default"]), "\n");
 }
 function MDXContent(props = {}) {
   const {
     wrapper: MDXLayout
-  } = Object.assign({}, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__.useMDXComponents)(), props.components);
+  } = Object.assign({}, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__.useMDXComponents)(), props.components);
   return MDXLayout ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MDXLayout, props, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_createMdxContent, props)) : _createMdxContent(props);
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MDXContent);
