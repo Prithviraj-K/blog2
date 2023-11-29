@@ -1844,7 +1844,7 @@ var d=(e="")=>e.split("language-").pop(),h=e=>{if(e?.children?.props){let{childr
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"siteTitle":"Minimal Blog","siteTitleAlt":"Minimal Blog - Gatsby Theme","siteHeadline":"Minimal Blog - Gatsby Theme from @lekoarts","siteUrl":"https://minimal-blog.lekoarts.de","siteDescription":"Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.","siteImage":"/banner.jpg","siteLanguage":"en","author":"@lekoarts_de"}}}}');
+module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"siteTitle":"Raj Khandekar","siteTitleAlt":"Raj Khandekar","siteHeadline":"Raj Khandekar","siteUrl":"https://rajkhandekar.com","siteDescription":"Hacker Writeups","siteImage":"/banner.jpg","siteLanguage":"en","author":"@lekoarts_de"}}}}');
 
 /***/ }),
 
@@ -1855,7 +1855,7 @@ module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"siteTitle":"Minim
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"data":{"minimalBlogConfig":{"basePath":"/","blogPath":"/blog","postsPath":"content/posts","pagesPath":"content/pages","tagsPath":"/tags","externalLinks":[{"name":"Twitter","url":"https://twitter.com/lekoarts_de"},{"name":"Homepage","url":"https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter"}],"navigation":[{"title":"Blog","slug":"/blog"},{"title":"About","slug":"/about"}],"showLineNumbers":false,"showCopyButton":true}}}');
+module.exports = JSON.parse('{"data":{"minimalBlogConfig":{"basePath":"/","blogPath":"/blog","postsPath":"content/posts","pagesPath":"content/pages","tagsPath":"/tags","externalLinks":[{"name":"LinkedIn","url":"https://www.linkedin.com/in/rajkhandekar/"},{"name":"Twitter","url":""}],"navigation":[{"title":"Blog","slug":"/blog"},{"title":"About","slug":"/about"}],"showLineNumbers":false,"showCopyButton":true}}}');
 
 /***/ })
 

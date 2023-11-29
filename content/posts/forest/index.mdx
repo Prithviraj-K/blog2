@@ -1,8 +1,26 @@
 ---
 title: Forest
-date: 2023-11-29
+date: 2023-10-21
 tags:
   - OSCP
+  - HackTheBox
 ---
 
+# Recon
+## Nmap
 
+```
+nmap -v -A -oA nmap/forest 10.10.10.161
+```
+
+## Ping
+```
+ping 10.10.10.161
+```
+
+Ping tool suggests the box is windows as it has a ttl of 127.
+
+### Standard TTLs
+- Linux default ttl is 64
+- Windows default ttl is 128 (-1 for router)
+- Routers or network devices are 255 (usually above 128)

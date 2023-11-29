@@ -17,25 +17,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /*@jsxRuntime classic @jsx React.createElement @jsxFrag React.Fragment*/
+/*<Title text="Projects" />
+
+- [3D Art with Cinema4D](https://www.lekoarts.de/art/3d?utm_source=minimal-blog&utm_medium=Theme)
+- [Landscape Photography](https://www.lekoarts.de/art/photography?utm_source=minimal-blog&utm_medium=Theme)*/
 
 
 function _createMdxContent(props) {
-  const _components = Object.assign({
-      ul: "ul",
-      li: "li",
-      a: "a"
-    }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__.useMDXComponents)(), props.components),
-    {
-      Title
-    } = _components;
-  if (!Title) _missingMdxReference("Title", true, "1:1-1:26");
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, {
-    text: "Projects"
-  }), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.ul, null, "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.li, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.a, {
-    href: "https://www.lekoarts.de/art/3d?utm_source=minimal-blog&utm_medium=Theme"
-  }, "3D Art with Cinema4D")), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.li, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.a, {
-    href: "https://www.lekoarts.de/art/photography?utm_source=minimal-blog&utm_medium=Theme"
-  }, "Landscape Photography")), "\n"));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment));
 }
 function MDXContent(props = {}) {
   const {
@@ -44,9 +33,6 @@ function MDXContent(props = {}) {
   return MDXLayout ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MDXLayout, props, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_createMdxContent, props)) : _createMdxContent(props);
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MDXContent);
-function _missingMdxReference(id, component, place) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it." + (place ? "\nIt’s referenced in your code at `" + place + "` in `/Users/rajkhandekar/Documents/blog/blog2/src/@lekoarts/gatsby-theme-minimal-blog/texts/bottom.mdx`" : ""));
-}
 
 /***/ }),
 
@@ -82,7 +68,7 @@ function _createMdxContent(props) {
       fontWeight: `bold`,
       color: `heading`
     }
-  }), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "I'm Raj Khandekar."));
+  }), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "Hello, I'm Raj Khandekar."), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "Join me as I document my journey through the OSCP certification and beyond."));
 }
 function MDXContent(props = {}) {
   const {
@@ -2103,7 +2089,7 @@ var d=(e="")=>e.split("language-").pop(),h=e=>{if(e?.children?.props){let{childr
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"siteTitle":"Minimal Blog","siteTitleAlt":"Minimal Blog - Gatsby Theme","siteHeadline":"Minimal Blog - Gatsby Theme from @lekoarts","siteUrl":"https://minimal-blog.lekoarts.de","siteDescription":"Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.","siteImage":"/banner.jpg","siteLanguage":"en","author":"@lekoarts_de"}}}}');
+module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"siteTitle":"Raj Khandekar","siteTitleAlt":"Raj Khandekar","siteHeadline":"Raj Khandekar","siteUrl":"https://rajkhandekar.com","siteDescription":"Hacker Writeups","siteImage":"/banner.jpg","siteLanguage":"en","author":"@lekoarts_de"}}}}');
 
 /***/ }),
 
@@ -2114,7 +2100,7 @@ module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"siteTitle":"Minim
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"data":{"minimalBlogConfig":{"basePath":"/","blogPath":"/blog","postsPath":"content/posts","pagesPath":"content/pages","tagsPath":"/tags","externalLinks":[{"name":"Twitter","url":"https://twitter.com/lekoarts_de"},{"name":"Homepage","url":"https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter"}],"navigation":[{"title":"Blog","slug":"/blog"},{"title":"About","slug":"/about"}],"showLineNumbers":false,"showCopyButton":true}}}');
+module.exports = JSON.parse('{"data":{"minimalBlogConfig":{"basePath":"/","blogPath":"/blog","postsPath":"content/posts","pagesPath":"content/pages","tagsPath":"/tags","externalLinks":[{"name":"LinkedIn","url":"https://www.linkedin.com/in/rajkhandekar/"},{"name":"Twitter","url":""}],"navigation":[{"title":"Blog","slug":"/blog"},{"title":"About","slug":"/about"}],"showLineNumbers":false,"showCopyButton":true}}}');
 
 /***/ })
 
