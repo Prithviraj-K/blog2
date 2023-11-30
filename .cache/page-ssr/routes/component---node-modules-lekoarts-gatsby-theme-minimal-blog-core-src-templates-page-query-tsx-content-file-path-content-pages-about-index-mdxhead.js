@@ -19,7 +19,7 @@ __webpack_require__.r(__webpack_exports__);
 function OSWE() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "OSWE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("iframe", {
     src: "https://www.credential.net/embed/196f031f-3dbb-4fd9-9f0e-d31207530e89",
-    width: "50%",
+    width: "66%",
     height: "800",
     frameborder: "0",
     allowfullscreen: true

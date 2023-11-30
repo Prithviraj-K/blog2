@@ -6,7 +6,9 @@ function OSWE() {
 		width="66%"
 		height="800"
 		frameborder="0"
-		allowfullscreen>
+		allowfullscreen
+		title="credential"
+		>
 	  </iframe></>)
 }
 
