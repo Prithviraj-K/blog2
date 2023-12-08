@@ -22,7 +22,8 @@ function OSWE() {
     width: "66%",
     height: "800",
     frameborder: "0",
-    allowfullscreen: true
+    allowfullscreen: true,
+    title: "credential"
   }));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OSWE);

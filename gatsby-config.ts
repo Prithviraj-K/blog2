@@ -14,8 +14,7 @@ const config: GatsbyConfig = {
     siteUrl: `https://rajkhandekar.com`,
     siteDescription: 'Hacker Writeups',
     siteImage: `/banner.jpg`,
-    siteLanguage: `en`,
-    author: `@lekoarts_de`,
+    siteLanguage: `en`
   },
   trailingSlash: `always`,
   plugins: [
