@@ -9,20 +9,18 @@ Hello, I'm Raj Khandekar, a cybersecurity enthusiast with a passion for penetrat
 ## Blog Overview
 
 ## Proving Grounds Machines
+I will be using the TJ NULL list along with Proving Grounds for the 2023-2024 exam period. The list of machines are [here](https://docs.google.com/spreadsheets/u/1/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw8/htmlview#)
 
 Stay tuned for detailed penetration testing reports on Proving Grounds machines. Here are some upcoming reports:
 
-1. **Machine Name 1**
-   - [Link to the penetration test report.]
+1. **Codo**
 
-2. **Machine Name 2**
-   - [Link to the penetration test report.]
+2. **Crane**
 
 ## Connect With Me
-
-- [Twitter](https://twitter.com/yourhandle)
+- [Twitter](https://twitter.com/raj5g_)
 - [LinkedIn](https://www.linkedin.com/in/rajkhandekar/)
-- [Blog](https://yourblogwebsite.com)
+- [Blog](https://rajkhandekar.netflify.app)
 
 Feel free to follow along with my certification journey and bug bounty experiences. 
 Your feedback and questions are always welcome!
