@@ -28,7 +28,8 @@ function _createMdxContent(props) {
     pre: "pre",
     h2: "h2",
     ul: "ul",
-    li: "li"
+    li: "li",
+    a: "a"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__.useMDXComponents)(), props.components);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.span, {
     dangerouslySetInnerHTML: {
@@ -58,7 +59,9 @@ function _createMdxContent(props) {
     dangerouslySetInnerHTML: {
       __html: "<span\n      class=\"gatsby-resp-image-wrapper\"\n      style=\"position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; \"\n    >\n      <span\n    class=\"gatsby-resp-image-background-image\"\n    style=\"padding-bottom: 30.41666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA50lEQVR42n1R7W6DMAzkVbpCoQkkgSR8BBjVuk17/xe62R7rJg3tx+lykXM525n2G3S8Y5hfEacX+H5DT9yFFdYvcMTajiiqDtc6EnpcVBD9VNg/yBQVKR1Q6bgj4EqszSBnhiKTSn3V8KNTbnA6MBND/rGmBMYl4gmNm2C6BNvNcmfaBEdJWVs6l8ofGv0kbPpHEjavJN0o+r+HkvIAWRefaV4E4pqMyr01nldetjhfHM7E+Q7W+S9dMGie3zrzZLRsH5jXd4zpLgthTsubLKj1K3zcEIabaG6ddW0mlDxf6lA1w2MHnzMFuKx40HgMAAAAAElFTkSuQmCC'); background-size: cover; display: block;\"\n  ></span>\n  <img\n        class=\"gatsby-resp-image-image\"\n        alt=\"firstrun\"\n        title=\"\"\n        src=\"/static/d7745fc79b63f9bb34b8a4ecb84a3b96/7d769/firstrun.png\"\n        srcset=\"/static/d7745fc79b63f9bb34b8a4ecb84a3b96/5243c/firstrun.png 240w,\n/static/d7745fc79b63f9bb34b8a4ecb84a3b96/ab158/firstrun.png 480w,\n/static/d7745fc79b63f9bb34b8a4ecb84a3b96/7d769/firstrun.png 960w,\n/static/d7745fc79b63f9bb34b8a4ecb84a3b96/87339/firstrun.png 1440w,\n/static/d7745fc79b63f9bb34b8a4ecb84a3b96/7385a/firstrun.png 1800w\"\n        sizes=\"(max-width: 960px) 100vw, 960px\"\n        style=\"width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;\"\n        loading=\"lazy\"\n        decoding=\"async\"\n      />\n    </span>"
     }
-  }), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "Unfortunately, the script does not run correctly and fails in uploading the script. We can manually upload a PHP script as shown by the output."));
+  }), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "Unfortunately, the script does not run correctly and fails in uploading the script. We can manually upload a PHP script as shown by the output."), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.ul, null, "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.li, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.a, {
+    href: "https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php"
+  }, "Use this PHP reverse shell")), "\n"));
 }
 function MDXContent(props = {}) {
   const {
