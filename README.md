@@ -11,12 +11,6 @@ Hello, I'm Raj Khandekar, a cybersecurity enthusiast with a passion for penetrat
 ## Proving Grounds Machines
 I will be using the TJ NULL list along with Proving Grounds for the 2023-2024 exam period. The list of machines are [here](https://docs.google.com/spreadsheets/u/1/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw8/htmlview#). Go to the `PWK V3 (PEN 200 2023)` tab for the latest set of machines recommended for OSCP.
 
-Stay tuned for detailed penetration testing reports on Proving Grounds machines. Here are some upcoming reports:
-
-1. **Codo**
-
-2. **Crane**
-
 ## Connect With Me
 - [Twitter](https://twitter.com/raj5g_)
 - [LinkedIn](https://www.linkedin.com/in/rajkhandekar/)
