@@ -35,8 +35,6 @@ ftp 192.168.229.46
 ```
 ![accounts](./accounts.png)
 
-`Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt`
-
 ### Ncrack
 Ncrack is a powerful open-source network authentication cracking tool. It's designed to help assess and strengthen the security of networks by identifying weak credentials. 
 Ncrack supports various protocols such as SSH, RDP, FTP, Telnet, HTTP(S), and more, making it versatile for testing a wide range of systems. With its robust and flexible features, Ncrack is the perfect
@@ -132,7 +130,7 @@ Juicy.Potato.x86.exe -t * -c {9B1F122C-2982-4e91-AA8B-E071D54F2A4D} -l 1337 -p "
 ![run](./run.png)
 ![result](./result.png)
 
-The command works and we have a shell as nt authority\system.
+The command works and we have a shell as NT Authority\System.
 
 # Summary
 Reconnaissance:
@@ -153,7 +151,7 @@ Exploitation:
 Privilege Escalation:
 - Leveraged the SeImpersonatePrivilege privilege and system information obtained through enumeration
 - Exploited a known CLSID vulnerability using Juicy Potato
-- Executed Juicy Potato with the appropriate CLSID, resulting in escalated privileges to nt authority\system
+- Executed Juicy Potato with the appropriate CLSID, resulting in escalated privileges to NT Authority\System
 
 Join me for the next machine soon for more exciting challenges and security insights!
 
