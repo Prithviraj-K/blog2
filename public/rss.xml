@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Minimal Blog - @lekoarts/gatsby-theme-minimal-blog]]></title><description><![CDATA[Hacker Writeups]]></description><link>https://rajkhandekar.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 24 Feb 2024 14:21:15 GMT</lastBuildDate><item><title><![CDATA[AuthBy]]></title><link>https://rajkhandekar.com/auth-by</link><guid isPermaLink="false">https://rajkhandekar.com/auth-by</guid><pubDate>Tue, 20 Feb 2024 05:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nmap nmap -sC -sV -Pn 192.168.229.46
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Minimal Blog - @lekoarts/gatsby-theme-minimal-blog]]></title><description><![CDATA[Hacker Writeups]]></description><link>https://rajkhandekar.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 24 Feb 2024 21:51:38 GMT</lastBuildDate><item><title><![CDATA[AuthBy]]></title><link>https://rajkhandekar.com/auth-by</link><guid isPermaLink="false">https://rajkhandekar.com/auth-by</guid><pubDate>Sun, 25 Feb 2024 05:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nmap nmap -sC -sV -Pn 192.168.229.46
 
 
 Then, I will run a full port nmap scan
@@ -6,7 +6,10 @@ Then, I will run a full port nmap scan
 nmap -sC -sV -Pn --open -p- 192.168.229.46
 
 
-The full port…&lt;/p&gt;&lt;div style=&quot;margin-top: 50px; font-style: italic;&quot;&gt;&lt;strong&gt;&lt;a href=&quot;https://rajkhandekar.com/auth-by&quot;&gt;Keep reading&lt;/a&gt;.&lt;/strong&gt;&lt;/div&gt;&lt;br /&gt; &lt;br /&gt;</content:encoded></item><item><title><![CDATA[Internal]]></title><link>https://rajkhandekar.com/internal</link><guid isPermaLink="false">https://rajkhandekar.com/internal</guid><pubDate>Thu, 15 Feb 2024 05:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nmap nmap -sC -sV 192.168.229.46
+The full port…&lt;/p&gt;&lt;div style=&quot;margin-top: 50px; font-style: italic;&quot;&gt;&lt;strong&gt;&lt;a href=&quot;https://rajkhandekar.com/auth-by&quot;&gt;Keep reading&lt;/a&gt;.&lt;/strong&gt;&lt;/div&gt;&lt;br /&gt; &lt;br /&gt;</content:encoded></item><item><title><![CDATA[Kevin]]></title><link>https://rajkhandekar.com/kevin</link><guid isPermaLink="false">https://rajkhandekar.com/kevin</guid><pubDate>Tue, 20 Feb 2024 05:00:00 GMT</pubDate><content:encoded>&lt;p&gt;NmapAutomator nmapAutomator.sh --host 192.168.152.45 -t basic
+
+
+The basic nmapAutomator scan shows a HTTP port. This will be the first port…&lt;/p&gt;&lt;div style=&quot;margin-top: 50px; font-style: italic;&quot;&gt;&lt;strong&gt;&lt;a href=&quot;https://rajkhandekar.com/kevin&quot;&gt;Keep reading&lt;/a&gt;.&lt;/strong&gt;&lt;/div&gt;&lt;br /&gt; &lt;br /&gt;</content:encoded></item><item><title><![CDATA[Internal]]></title><link>https://rajkhandekar.com/internal</link><guid isPermaLink="false">https://rajkhandekar.com/internal</guid><pubDate>Thu, 15 Feb 2024 05:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nmap nmap -sC -sV 192.168.229.46
 
 
 There are several ports open on the machine, including http, smb etc.
